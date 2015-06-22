@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#7D8AA1"
+    tools:context="br.edu.ifpb.rfm.facebookappif.NotificationActivity" >
+
+    <Button
+        android:id="@+id/btChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#3f5c9a"
+        android:padding="15dp"
+        android:text="@string/chat"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/ListView_lista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btChat"
+        android:layout_margin="20dp"
+        android:background="#C8CFDB"
+        android:orientation="vertical" >
+    </ListView>
+
+    
+</RelativeLayout>

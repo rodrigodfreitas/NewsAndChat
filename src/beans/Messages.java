@@ -3,6 +3,7 @@ package beans;
 import java.io.Serializable;
 import java.util.List;
 
+@SuppressWarnings("serial")
 public class Messages implements Serializable {
 	
 	private List<Message> messages;

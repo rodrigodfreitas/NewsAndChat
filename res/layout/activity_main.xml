@@ -1,24 +1,21 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/layoutBackground"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ifpb.newandchat.MainActivity" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#7D8AA1"
+    android:orientation="vertical"
+    tools:context="br.edu.ifpb.rfm.facebookappif.LoginActivity" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@color/backgroudColorFB"
-        android:padding="8dp"
-        android:text="@string/logFacebook"
-        android:textSize="21sp"
-        android:textColor="@color/white" />
+        android:layout_gravity="center"
+        android:layout_marginTop="350dp"
+        android:background="#3f5c9a"
+        android:padding="15dp"
+        android:text="@string/login"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
-</RelativeLayout>
+</LinearLayout>

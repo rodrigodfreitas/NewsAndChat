@@ -4,10 +4,23 @@
     <string name="app_name">NewsAndChat</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="logFacebook">Login Facebook</string>
     <string name="msgError">Você não tem acesso</string>
-    
+    <string name="login">Login com Facebook</string>
+    <string name="chat">Ir para o chat</string>
+    <string name="logoff">Sair da aplicação</string>
+    <string name="aut">Autores</string>
+    <string name="tit">Titulo</string>
+    <string name="cont">Conteúdo</string>
+    <string name="title_activity_notification">Notificações</string>
+    <string name="title_activity_news">Notícia</string>
+    <string name="title_activity_error__login">Erro no Login</string>
+    <string name="title_activity_notification_adapter">NotificationAdapter</string>
+    <string name="desc">Descrição da Imagem</string>
+    <string name="LargeText">Large Text</string>
+    <string name="SmallText">Small Text</string>
+
     <color name="backgroudColorFB">#3f5c9a</color>
     <color name="white">#ffffff</color>
-	<color name="layoutBackground">#b8c4e0</color>
+    <color name="layoutBackground">#b8c4e0</color>
+
 </resources>

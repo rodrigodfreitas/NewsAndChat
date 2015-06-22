@@ -1,36 +1,58 @@
 package br.edu.ifpb;
 
-import java.util.List;
-
-import controle.Controller;
-import servicos.ServiceNotification;
-import xmlparse.XmlParse;
-import beans.Message;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class NewsActivity extends Activity {
-
-	List<Message> list;
+	
+	private TextView TitleView, ConteudoView, AutorView;
+	private ImageView PhotoView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.news_layout);
+		
+		TitleView = (TextView)findViewById(R.id.txtTitle);
+		ConteudoView = (TextView)findViewById(R.id.txtContent);
+		AutorView = (TextView)findViewById(R.id.txtAuthor);
+		PhotoView = (ImageView)findViewById(R.id.txtImage);
+		
+		Intent i= getIntent();
+        Bundle bund = i.getExtras();
 
-		Log.i("Msg", "iniciando o service");
-		Intent intent = new Intent(this, ServiceNotification.class);
-		startService(intent);
+        if(bund!=null)
+        {
+            String j =(String) bund.get("titulo");
+            TitleView.setText(j);
+        
+            String k =(String) bund.get("conteudo");
+            ConteudoView.setText(k);
 
-		for(int i = 0; i < 100; i++){
-			Log.i("Msg", "Exibindo lista");
-			Log.i("Msg", Controller.getInstance().getSession());
-			Log.i("Msg", String.valueOf(Controller.getInstance().getSize()));
-		}
-		// Thread thread = new Thread() {
+            String l =(String) bund.get("autor");
+            AutorView.setText(l);
+            
+            Bitmap m =(Bitmap) bund.get("imagem");
+            PhotoView.setImageBitmap(m);
+        }
+	}
+}
+
+		//
+		// Log.i("Msg", "iniciando o service");
+		// Intent intent = new Intent(this, ServiceNotification.class);
+		// startService(intent);
+		//
+		// for(int i = 0; i < 100; i++){
+		// Log.i("Msg", "Exibindo lista");
+		// Log.i("Msg", Controller.getInstance().getSession());
+		// Log.i("Msg", String.valueOf(Controller.getInstance().getSize()));
+		// }
+		// // Thread thread = new Thread() {
 		// public void run() {
 		// try {
 		//
@@ -67,7 +89,7 @@ public class NewsActivity extends Activity {
 		//
 		//
 
-	}
+	//}
 
 	// private void setListAdapter(NewsActivity newsActivity, List<Message>
 	// list2) {
@@ -75,4 +97,4 @@ public class NewsActivity extends Activity {
 	//
 	// }
 
-}
+//}

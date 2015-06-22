@@ -1,18 +1,5 @@
 package br.edu.ifpb;
 
-import java.io.IOException;
-import java.net.UnknownHostException;
-import java.text.ParseException;
-import java.util.List;
-
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.xml.sax.SAXException;
-
-import controle.Controller;
-import beans.Message;
-import servicos.LoginServiceImp;
-import xmlparse.XmlParse;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +7,7 @@ import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import controle.Controller;
 
 public class WebViewActivity extends Activity {
 
@@ -46,6 +34,7 @@ public class WebViewActivity extends Activity {
 					token = auxToken[1].split("&");
 					Log.i("Token", token[0]);
 					Thread thread = new Thread() {
+						@SuppressWarnings("unused")
 						public void run() {
 //							try {
 								
@@ -59,7 +48,7 @@ public class WebViewActivity extends Activity {
 									if( !session.equals("") ){
 										Controller.getInstance().setSession( session );
 										Log.i("Msg", "Abrindo a NewActivity");
-										Intent in = new Intent(WebViewActivity.this,NewsActivity.class);
+										Intent in = new Intent(WebViewActivity.this,NotificationActivity.class);
 										startActivity(in);
 									} else{
 										//uma página de erro

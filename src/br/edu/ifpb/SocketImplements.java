@@ -6,10 +6,8 @@ import java.net.Socket;
 import java.net.SocketAddress;
 import java.net.UnknownHostException;
 import java.nio.channels.SocketChannel;
-import java.util.List;
 import java.util.Scanner;
 
-import beans.Message;
 import xmlparse.XmlParse;
 import android.util.Log;
 
@@ -74,6 +72,7 @@ public class SocketImplements {
 		Log.i("Lendo", "recuperando mensagens");
 		this.socket = new Socket(this.host, 10006);
 
+		@SuppressWarnings("unused")
 		String response = null;
 
 		this.socket.getOutputStream().write(XmlParse.xmlSessionNoticias(session).getBytes());
